@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct RegisterView: View {
     
-    @State var email = ""
-    @State var username = ""
-    @State var password = ""
-    @State var repeatPassword = ""
+    @StateObject var viewModel = RegisterViewModel()
     
     var body: some View {
         NavigationView {
@@ -22,39 +20,44 @@ struct RegisterView: View {
                 
                 // Register Form
                 Form {
-                    TextField("Username", text: $username)
+                    TextField("Username", text: $viewModel.username)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocorrectionDisabled()
                         .textContentType(.username)
                     
-                    TextField("Email Adress", text: $email)
+                    TextField("Email Adress", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
-                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .autocapitalization(.none)
                         .autocorrectionDisabled()
                         .textContentType(.emailAddress)
                     
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocorrectionDisabled()
                         .textContentType(.password)
                     
-                    SecureField("Repeat Password", text: $repeatPassword)
+                    SecureField("Repeat Password", text: $viewModel.repeatPassword)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocorrectionDisabled()
                         .textContentType(.password)
                     
                     TDLButton(title: "Create an account", backgroundColor: Color.green, titleColor: Color.white) {
-                        // Action
+                        viewModel.register()
+                    }
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(Color.red)
+                            .frame(maxWidth: .infinity, alignment: .center)
                     }
                 }.offset(y: -80)
                 
                 // Already have an account
-                VStack{
-                    Text("Already have an account?")
-                    NavigationLink("Log into it", destination: LoginView())
-                    
-                }
-                .padding(.bottom, 30)
+//                VStack{
+//                    Text("Already have an account?")
+//                    NavigationLink("Log into it", destination: LoginView())
+//                    
+//                }
+//                .padding(.bottom, 30)
                 
                 Spacer()
             }

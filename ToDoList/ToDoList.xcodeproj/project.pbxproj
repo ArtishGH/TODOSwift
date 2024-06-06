@@ -33,6 +33,7 @@
 		B01DFF132C10E29E00217F70 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01DFF122C10E29E00217F70 /* RegisterViewModel.swift */; };
 		B01DFF152C10E2A700217F70 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01DFF142C10E2A700217F70 /* ToDoListViewModel.swift */; };
 		B01DFF182C10E7C300217F70 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01DFF172C10E7C300217F70 /* HeaderView.swift */; };
+		B025E62D2C12186100699DAF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025E62C2C12186100699DAF /* Extensions.swift */; };
 		B093278D2C11009000DA6ECD /* TDLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093278C2C11009000DA6ECD /* TDLButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		B01DFF122C10E29E00217F70 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B01DFF142C10E2A700217F70 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
 		B01DFF172C10E7C300217F70 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		B025E62C2C12186100699DAF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B093278C2C11009000DA6ECD /* TDLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 			children = (
 				B01DFEE72C10CBE700217F70 /* GoogleService-Info.plist */,
 				B017DD102C10C80500EE1C9F /* ToDoListApp.swift */,
+				B025E62C2C12186100699DAF /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				B01DFF0B2C10E27700217F70 /* ProfileViewModel.swift in Sources */,
 				B01DFEF72C10E12A00217F70 /* ProfileView.swift in Sources */,
 				B01DFF112C10E29400217F70 /* LoginViewModel.swift in Sources */,
+				B025E62D2C12186100699DAF /* Extensions.swift in Sources */,
 				B01DFF0F2C10E28D00217F70 /* NewItemViewModel.swift in Sources */,
 				B017DD112C10C80500EE1C9F /* ToDoListApp.swift in Sources */,
 				B01DFF072C10E22A00217F70 /* ToDoListItem.swift in Sources */,

@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ToDoListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            // Header
+            HeaderView(title: "TODO List", subtitle: "Start adding your tasks", angle: 0, backgroundColor: Color.blue).offset(y: -30)
+            
+            
+            
+            Spacer()
+        }
     }
 }
 
